@@ -2,8 +2,8 @@
 #
 # Confirms that an in-memory string matches a ground truth file.
 # Exports the actual value as a .tmp file as a side effect.
+#
 # 'cp foo/bar.tmp foo/bar' to correct valid test failures.
-################################################################################
 
 RSpec::Matchers.define :eql_file do |expected|
 

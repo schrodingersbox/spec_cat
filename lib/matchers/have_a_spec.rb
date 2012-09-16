@@ -1,9 +1,6 @@
 # have_a_spec.rb
 #
 # Confirms that a given file path has a corresponding spec file.
-################################################################################
-
-require 'rspec'
 
 RSpec::Matchers.define :have_a_spec do |expected|
 

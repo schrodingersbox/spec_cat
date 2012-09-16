@@ -1,4 +1,4 @@
-# rspec-cat
+# spec-cat
 
 This gem contains trivial matchers to make RSpecs a bit more effective and annoying.
 
@@ -33,7 +33,7 @@ e.g.  #foo produces a gnarly string too nasty to copy and paste into code.
 
 This mechanism is a bit brittle, but great for big blobs of data.
 
-If you use this, you should add '*.tmp' to your .gitignore.
+If you use this, you should add `*.tmp` to your .gitignore.
 
 ## have_a_spec
 
