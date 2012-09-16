@@ -2,6 +2,10 @@ require 'spec_helper.rb'
 
 describe RSpec::Matchers, 'have_a_spec' do
 
+  it 'has a description' do
+    have_a_spec.description.should eql( 'has a spec file' )
+  end
+
   it 'has a spec for itself' do
     'lib/matchers/have_a_spec.rb'.should have_a_spec
   end
