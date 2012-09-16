@@ -12,7 +12,7 @@ This gem contains trivial matchers to make RSpecs a bit more effective and annoy
 
 Add this to your gemfile...
 
-      gem 'spec-cat', :git => 'git@github.com:schrodingersbox/spec-cat.git'
+      gem 'spec-cat', :git => 'https://github.com/schrodingersbox/spec-cat.git'
 
 ## eql_file
 
