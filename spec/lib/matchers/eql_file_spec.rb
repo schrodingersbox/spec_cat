@@ -2,10 +2,11 @@ require 'spec_helper.rb'
 
 describe RSpec::Matchers, 'eql_file' do
 
-  TRUTH = 'spec/truth/think.txt'
-  LIE = 'All humanoid primates are created equal'
+  TRUTH = 'spec/data/truth.txt'
+  LIE = 'This statement is true'
 
   before( :all ) do
+
     @truth = File.open( TRUTH, 'rb' ) {|io| io.read }
   end
 

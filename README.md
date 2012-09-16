@@ -12,7 +12,7 @@ This gem contains trivial matchers to make RSpecs a bit more effective and annoy
 
 Add this to your gemfile...
 
-      gem 'spec-cat', '0.0.8', :git => 'git@github.com:schrodingersbox/spec-cat.git'
+      gem 'spec-cat', :git => 'git@github.com:schrodingersbox/spec-cat.git'
 
 ## eql_file
 
@@ -23,7 +23,7 @@ It also writes a .tmp file to replace the old ground truth if it's gone stale.
 
 e.g.  #foo produces a gnarly string too nasty to copy and paste into code.
 
-     foo.should eql_file( 'spec/truth/foo.json' )
+     foo.should eql_file( 'spec/data/foo.json' )
 
 ... if it fails for a valid change, you can just....
 
@@ -44,13 +44,13 @@ help ensure that you have good coverage.
 
 ... is a good thing to write right after you integrate RSpec.
 
-Here's my coverage spec...
+Here's an example coverage spec...
 
 <https://github.com/schrodingersbox/www/blob/master/spec/coverage_spec.rb>
 
 ## Testing
 
-    rspec spec
+    `rspec spec`
 
 ## Reference
 
