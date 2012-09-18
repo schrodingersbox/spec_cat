@@ -57,6 +57,10 @@ Here's an example coverage spec...
  * [RSpec](https://github.com/rspec/rspec-rails)
  * [Markdown](http://daringfireball.net/projects/markdown)
 
+## TODO
 
+ * Add helper method to accept ground truth files  - "cp #{path}.tmp #{path}"
+ * Add more matchers
+ * Publish to rubygems.org
 
 
