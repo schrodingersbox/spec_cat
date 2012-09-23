@@ -1,4 +1,4 @@
-# spec-cat
+# schrodingersbox/spec-cat README
 
 This gem contains trivial matchers to make RSpecs a bit more effective and annoying.
 
