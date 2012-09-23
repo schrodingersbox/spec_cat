@@ -7,8 +7,8 @@ Gem::Specification.new do |s|
   s.name        = 'spec-cat'
   s.version     = SpecCat::VERSION
   s.date        = '2012-09-16'
-  s.summary     = 'cat'
-  s.description = 'RSpec support library'
+  s.summary     = 'RSpec support library'
+  s.description = 'Adds a few useful matchers'
   s.authors     = ['Rich Humphrey']
   s.email       = 'rich@schrodingersbox.com'
   s.files       = Dir['lib/**/*'] + ['LICENSE', 'README.md']
