@@ -7,7 +7,7 @@ describe RSpec::Matchers, 'have_a_spec' do
   end
 
   it 'has a spec for itself' do
-    'lib/matchers/have_a_spec.rb'.should have_a_spec
+    'lib/spec-cat/matchers/have_a_spec.rb'.should have_a_spec
   end
 
   it 'does not have a spec for foo/bar.rb' do
@@ -15,7 +15,7 @@ describe RSpec::Matchers, 'have_a_spec' do
   end
 
   it 'has a spec for every Ruby file' do
-    Dir.glob( File.join( 'lib', 'matchers', '**' ) ) do |path|
+    Dir.glob( File.join( 'lib', 'spec-cat', '**' ) ) do |path|
       next if File.directory?( path )
       path.should have_a_spec
     end
