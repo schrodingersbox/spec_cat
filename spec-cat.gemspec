@@ -1,7 +1,7 @@
 $LOAD_PATH << File.join(File.dirname(__FILE__), 'lib')
 
 # Maintain your gem's version:
-require "spec-cat/version"
+require 'spec-cat/version'
 
 Gem::Specification.new do |s|
   s.name        = 'spec-cat'
