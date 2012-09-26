@@ -52,7 +52,6 @@ Here's an example coverage spec...
 
     `rspec spec && open coverage/index.html`
 
-
 ## Reference
 
  * [RSpec](https://github.com/rspec/rspec-rails)
