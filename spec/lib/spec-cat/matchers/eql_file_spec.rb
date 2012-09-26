@@ -22,10 +22,10 @@ describe RSpec::Matchers, 'eql_file' do
   end
 
   it 'has a failure message for should not' do
-     expected = "expected that #{@truth} would not match the contents of #{@path}"
+    expected = "expected that #{@truth} would not match the contents of #{@path}"
 
-     @matcher.instance_variable_set( :@expected, @path )
-     @matcher.instance_variable_set( :@actual, @truth )
+    @matcher.instance_variable_set( :@expected, @path )
+    @matcher.instance_variable_set( :@actual, @truth )
     @matcher.failure_message_for_should_not.should eql( expected )
   end
 
