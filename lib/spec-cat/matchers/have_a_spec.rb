@@ -2,7 +2,7 @@
 #
 # Confirms that a given file path has a corresponding spec file.
 
-RSpec::Matchers.define :have_a_spec do |expected|
+RSpec::Matchers.define :have_a_spec do
 
   description do
     'has a spec file'

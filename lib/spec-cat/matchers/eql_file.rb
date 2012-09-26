@@ -5,15 +5,15 @@
 #
 # 'cp foo/bar.tmp foo/bar' to correct valid test failures.
 
-RSpec::Matchers.define :eql_file do |expected|
+RSpec::Matchers.define :eql_file do |expected_path|
 
   description do
     "match the contents of #{expected}"
   end
 
   match do |actual|
-    File.open( "#{expected}.tmp",'wb' ) { |io| io.write actual }
-    slurped = File.open( "#{expected}", 'rb' ) {|io| io.read }
+    File.open( "#{expected_path}.tmp",'wb' ) { |io| io.write actual }
+    slurped = File.open( "#{expected_path}", 'rb' ) {|io| io.read }
     actual == slurped
   end
 

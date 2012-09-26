@@ -50,7 +50,8 @@ Here's an example coverage spec...
 
 ## Testing
 
-    `rspec spec`
+    `rspec spec && open coverage/index.html`
+
 
 ## Reference
 
