@@ -46,7 +46,7 @@ help ensure that you have good coverage.
 
 Here's an example coverage spec...
 
-<https://github.com/schrodingersbox/www/blob/master/spec/coverage_spec.rb>
+<https://github.com/schrodingersbox/spec-cat/blob/master/spec/coverage_spec.rb>
 
 ## Testing
 
