@@ -50,7 +50,7 @@ Here's an example coverage spec...
 
 ## Testing
 
-    `rspec spec && open coverage/index.html`
+    `rake spec_cat:coverage`
 
 ## Reference
 
