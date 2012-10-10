@@ -1,3 +1,3 @@
 #!/usr/bin/env rake
 require 'bundler/gem_tasks'
-load 'lib/tasks/spec-cat_tasks.rake'
+load 'lib/tasks/spec-cat.rake'

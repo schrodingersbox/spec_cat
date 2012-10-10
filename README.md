@@ -54,8 +54,9 @@ Here's an example coverage spec...
 
 ## Reference
 
- * [RSpec](https://github.com/rspec/rspec-rails)
  * [Markdown](http://daringfireball.net/projects/markdown)
+ * [RSpec](https://github.com/rspec/rspec)
+ * [Testing Rake Tasks with RSpec](http://www.philsergi.com/2009/02/testing-rake-tasks-with-rspec.html)
 
 ## TODO
 
