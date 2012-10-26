@@ -10,11 +10,11 @@ describe 'spec-cat rake tasks' do
     load 'lib/tasks/spec-cat.rake'
   end
 
-  describe 'rake spec_cat:coverage' do
+  describe 'rake spec-cat:coverage' do
 
     it 'runs specs and opens the coverage report' do
       Kernel.should_receive( :system ).with( 'rspec spec && open coverage/index.html' )
-      @rake[ 'spec_cat:coverage' ].invoke
+      @rake[ 'spec-cat:coverage' ].invoke
     end
 
   end

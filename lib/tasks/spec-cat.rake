@@ -1,4 +1,4 @@
-namespace :spec_cat do
+namespace :'spec-cat' do
 
   desc 'Run coverage and open the report'
   task :coverage do

@@ -50,7 +50,7 @@ Here's an example coverage spec...
 
 ## Testing
 
-    `rake spec_cat:coverage`
+    `rake spec-cat:coverage`
 
 ## Reference
 
