@@ -54,11 +54,9 @@ Here's an example coverage spec...
 
 ## Reference
 
- * [Google](http://www.google.com/search?q=recursion)
- * [Markdown](http://daringfireball.net/projects/markdown)
- * [Nathan Humbert's Blog: Rails 3: Loading rake tasks from a gem](http://blog.nathanhumbert.com/2010/02/rails-3-loading-rake-tasks-from-gem.html)
  * [RSpec](https://github.com/rspec/rspec)
  * [Testing Rake Tasks with RSpec](http://www.philsergi.com/2009/02/testing-rake-tasks-with-rspec.html)
+ * [Nathan Humbert's Blog: Rails 3: Loading rake tasks from a gem](http://blog.nathanhumbert.com/2010/02/rails-3-loading-rake-tasks-from-gem.html)
 
 ## TODO
 
