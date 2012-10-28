@@ -11,18 +11,18 @@ RSpec::Matchers.define :eql_file do |expected_path|
     "match the contents of #{expected}"
   end
 
-  match do |actual|
-    File.open( "#{expected_path}.tmp",'wb' ) { |io| io.write actual }
-    slurped = File.open( "#{expected_path}", 'rb' ) {|io| io.read }
-    actual == slurped
-  end
-
   failure_message_for_should do |actual|
     "expected that #{actual} would match the contents of #{expected}"
   end
 
   failure_message_for_should_not do |actual|
     "expected that #{actual} would not match the contents of #{expected}"
+  end
+
+  match do |actual|
+    extension = SpecCat.accept? ?  '' : '.tmp'
+    SpecCat.write( expected_path + extension, actual )
+    actual == SpecCat.read( expected_path )
   end
 
 end
