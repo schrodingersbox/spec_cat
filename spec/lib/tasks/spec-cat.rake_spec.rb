@@ -13,9 +13,10 @@ describe 'spec-cat rake tasks' do
   describe 'rake spec-cat:accept' do
 
     it 'runs specs and accepts all ground truth file changes' do
-      expected = 'SPEC_CAT_ACCEPT=1 rspec spec'
+      expected = 'rspec spec'
       Kernel.should_receive( :system ).with( expected )
       @rake[ 'spec-cat:accept' ].invoke
+      ENV[ 'SPEC_CAT_ACCEPT' ].should  eql( '1' )
     end
 
   end

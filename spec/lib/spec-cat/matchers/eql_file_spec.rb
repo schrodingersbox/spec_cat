@@ -6,6 +6,8 @@ describe RSpec::Matchers, 'eql_file' do
     @matcher = eql_file
     @path = 'spec/data/truth.txt'
     @truth = 'This statement is false'
+
+    SpecCat.stub!( :accept? ).and_return( false )
   end
 
   it 'has a description' do
