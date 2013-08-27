@@ -73,7 +73,6 @@ specs pass.
 
 ## TODO
 
- * Add helper method to accept ground truth files  - "cp #{path}.tmp #{path}"
  * Add more matchers
  * Publish to rubygems.org
 
