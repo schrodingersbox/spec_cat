@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.description = 'Adds a few useful matchers'
   s.authors     = ['Rich Humphrey']
   s.email       = 'rich@schrodingersbox.com'
-  s.files       = Dir['lib/**/*'] + ['LICENSE', 'Rakefile', 'README.md']
+  s.files       = Dir['lib/**/*'] + ['MIT-LICENSE', 'Rakefile', 'README.md']
   s.homepage    = 'https://github.com/schrodingersbox/spec_cat'
   s.require_path = ['lib']
 
