@@ -1,4 +1,4 @@
-# schrodingersbox/spec-cat
+# schrodingersbox/spec_cat
 
 This gem contains trivial matchers to make RSpecs a bit more effective and annoying.
 
@@ -12,7 +12,7 @@ This gem contains trivial matchers to make RSpecs a bit more effective and annoy
 
 Add this to your gemfile...
 
-      gem 'spec-cat', :git => 'https://github.com/schrodingersbox/spec-cat.git'
+      gem 'spec_cat', :git => 'https://github.com/schrodingersbox/spec_cat.git'
 
 ## Matchers
 
@@ -48,21 +48,21 @@ help ensure that you have good coverage.
 
 Here's an example coverage spec...
 
-<https://github.com/schrodingersbox/spec-cat/blob/master/spec/coverage_spec.rb>
+<https://github.com/schrodingersbox/spec_cat/blob/master/spec/coverage_spec.rb>
 
 ## Rake Tasks
 
-### spec-cat:accept
+### spec_cat:accept
 
-`rake spec-cat:accept` runs all specs and causes the eql_file matcher to overwrite
+`rake spec_cat:accept` runs all specs and causes the eql_file matcher to overwrite
 the ground truth files, rather than output .tmp files.
 
 This is convenient when a code change impacts a large number of ground truth files,
 but is also risky, as it may allow an incorrect change to become ground truth.
 
-### spec-cat:coverage
+### spec_cat:coverage
 
-`rake spec-cat:coverage` runs all specs and then opens the coverage report if all the
+`rake spec_cat:coverage` runs all specs and then opens the coverage report if all the
 specs pass.
 
 ## Reference

@@ -1,6 +1,6 @@
 require 'spec_helper.rb'
 
-require "spec-cat/version"
+require "spec_cat/version"
 
 describe 'version' do
 

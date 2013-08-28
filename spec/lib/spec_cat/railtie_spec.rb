@@ -1,11 +1,11 @@
 require 'spec_helper.rb'
 
-require 'spec-cat/railtie'
+require 'spec_cat/railtie'
 
 describe 'railtie' do
 
-  it 'names itself spec-cat' do
-    SpecCat::Railtie.railtie_name.should eql( 'spec-cat' )
+  it 'names itself spec_cat' do
+    SpecCat::Railtie.railtie_name.should eql( 'spec_cat' )
   end
 
   it 'loads rake tasks' do
@@ -13,7 +13,7 @@ describe 'railtie' do
     rake_tasks.should_not be_nil
     rake_tasks.size.should be( 1 )
 
-    SpecCat::Railtie.should_receive( :load ).with( 'tasks/spec-cat.rake' )
+    SpecCat::Railtie.should_receive( :load ).with( 'tasks/spec_cat.rake' )
     rake_tasks.first.call
   end
 

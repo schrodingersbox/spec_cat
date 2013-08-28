@@ -4,7 +4,7 @@ describe RSpec::Matchers, 'have_a_spec' do
 
   before( :each ) do
     @matcher = have_a_spec
-    @good_path = 'lib/spec-cat/matchers/have_a_spec.rb'
+    @good_path = 'lib/spec_cat/matchers/have_a_spec.rb'
     @bad_path = 'foo/bar.rb'
   end
 

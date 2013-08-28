@@ -1,4 +1,4 @@
-namespace :'spec-cat' do
+namespace :'spec_cat' do
 
   desc 'Run rspec and accept all ground truth file changes'
   task :accept do

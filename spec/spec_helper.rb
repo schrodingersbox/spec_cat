@@ -1,4 +1,4 @@
 require 'simplecov'
 SimpleCov.start
 
-require 'spec-cat'
+require 'spec_cat'
