@@ -8,16 +8,16 @@ RSpec::Matchers.define :include_module do |expected_module|
     "includes #{expected}"
   end
 
-  failure_message_for_should do |actual|
-    "expected that #{actual} would include #{expected}"
+  failure_message_for_should do |subject|
+    "expected that #{subject.class} would include #{expected}"
   end
 
-  failure_message_for_should_not do |actual|
-    "expected that #{actual} would not include #{expected}"
+  failure_message_for_should_not do |subject|
+    "expected that #{subject.class} would not include #{expected}"
   end
 
-  match do |actual|
-    actual.included_modules.include?( expected_module )
+  match do |subject|
+    subject.class.included_modules.include?( expected_module )
   end
 
 end
