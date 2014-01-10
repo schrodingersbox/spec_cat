@@ -50,6 +50,12 @@ Here's an example coverage spec...
 
 <https://github.com/schrodingersbox/spec_cat/blob/master/spec/coverage_spec.rb>
 
+### include_module
+
+`include_module` makes it easy to spec concerns.
+
+    it 'is Taggable' { should include_module( Taggable ) }
+
 ## Rake Tasks
 
 ### spec_cat:accept
