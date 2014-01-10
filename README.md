@@ -52,9 +52,9 @@ Here's an example coverage spec...
 
 ### include_module
 
-`include_module` makes it easy to spec concerns.
+`include_module` makes it easy to spec concern inclusion.
 
-    it 'is Taggable' { should include_module( Taggable ) }
+    it( 'is Taggable' ) { should include_module( Taggable ) }
 
 ## Rake Tasks
 
