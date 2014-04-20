@@ -6,9 +6,10 @@ require 'spec_cat/version'
 Gem::Specification.new do |s|
   s.name        = 'spec_cat'
   s.version     = SpecCat::VERSION
+  s.licenses    = ['MIT']
   s.date        = '2012-09-16'
   s.summary     = 'RSpec support library'
-  s.description = 'Adds a few useful matchers'
+  s.description = 'Adds a few useful RSpec matchers'
   s.authors     = ['Rich Humphrey']
   s.email       = 'rich@schrodingersbox.com'
   s.files       = Dir['lib/**/*'] + ['MIT-LICENSE', 'Rakefile', 'README.md']
