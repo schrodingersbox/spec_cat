@@ -1,3 +1,9 @@
+[![Build Status](https://travis-ci.org/schrodingersbox/spec_cat.svg?branch=master)](https://travis-ci.org/schrodingersbox/spec_cat)
+[![Coverage Status](https://coveralls.io/repos/schrodingersbox/spec_cat/badge.png?branch=master)](https://coveralls.io/r/schrodingersbox/spec_cat?branch=master)
+[![Code Climate](https://codeclimate.com/github/schrodingersbox/spec_cat.png)](https://codeclimate.com/github/schrodingersbox/spec_cat)
+[![Dependency Status](https://gemnasium.com/schrodingersbox/spec_cat.png)](https://gemnasium.com/schrodingersbox/spec_cat)
+[![Gem Version](https://badge.fury.io/rb/spec_cat.png)](http://badge.fury.io/rb/spec_cat)
+
 # schrodingersbox/spec_cat
 
 This gem contains trivial matchers to make RSpecs a bit more effective and annoying.
@@ -79,6 +85,7 @@ specs pass.
 
 ## TODO
 
+ * Fix include_module - only get class if arg is not already a class
  * Add more matchers
  * Publish to rubygems.org
 

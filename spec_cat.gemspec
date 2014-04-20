@@ -15,8 +15,10 @@ Gem::Specification.new do |s|
   s.homepage    = 'https://github.com/schrodingersbox/spec_cat'
   s.require_path = ['lib']
 
-  s.add_development_dependency 'rspec'
-  s.add_development_dependency 'simplecov'
-  s.add_development_dependency 'rails'
+  s.add_dependency 'rspec', '~> 2.14', '>= 2.14.0'
+
+  s.add_development_dependency 'rails', '~> 4.0', '>= 4.0.0'
+  s.add_development_dependency 'simplecov', '~> 0.8', '>= 0.8.2'
+  s.add_development_dependency 'coveralls', '~> 0.7', '>= 0.7.0'
 end
 
