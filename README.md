@@ -9,7 +9,17 @@
 This gem contains trivial matchers to make RSpecs a bit more effective and annoying.
 
  * eql_file
+
  * have_a_spec
+
+ * include_module
+
+It also provides rake commands
+
+ * rake spec_cat:accept
+
+ * spec_cat:coverage
+
 
  NOTE: This gem does not depend on Rails.  All paths are relative to cwd, which
  may be Rails.root or anywhere else.
@@ -82,6 +92,7 @@ specs pass.
  * [RSpec](https://github.com/rspec/rspec)
  * [Testing Rake Tasks with RSpec](http://www.philsergi.com/2009/02/testing-rake-tasks-with-rspec.html)
  * [Nathan Humbert's Blog: Rails 3: Loading rake tasks from a gem](http://blog.nathanhumbert.com/2010/02/rails-3-loading-rake-tasks-from-gem.html)
+ * [Add Achievement Badges to Your Gem README](http://elgalu.github.io/2013/add-achievement-badges-to-your-gem-readme/)
  * [Publishing your gem](http://guides.rubygems.org/publishing/)
 
 ## TODO
