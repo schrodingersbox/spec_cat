@@ -28,7 +28,7 @@ It also provides rake commands
 
 Add this to your gemfile...
 
-      gem 'spec_cat', :git => 'https://github.com/schrodingersbox/spec_cat.git'
+      gem 'spec_cat'
 
 ## Matchers
 
@@ -94,6 +94,7 @@ specs pass.
  * [Nathan Humbert's Blog: Rails 3: Loading rake tasks from a gem](http://blog.nathanhumbert.com/2010/02/rails-3-loading-rake-tasks-from-gem.html)
  * [Add Achievement Badges to Your Gem README](http://elgalu.github.io/2013/add-achievement-badges-to-your-gem-readme/)
  * [Publishing your gem](http://guides.rubygems.org/publishing/)
+ * [Better Specs](http://betterspecs.org)
 
 ## TODO
 
