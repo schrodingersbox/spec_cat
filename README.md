@@ -6,7 +6,7 @@
 
 # schrodingersbox/spec_cat
 
-This gem contains trivial matchers to make RSpecs a bit more effective and annoying.
+This gem contains trivial matchers to make RSpecs a bit more effective and less annoying.
 
  * eql_file
 
