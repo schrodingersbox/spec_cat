@@ -9,17 +9,13 @@
 This gem contains trivial matchers to make RSpecs a bit more effective and less annoying.
 
  * eql_file
-
  * have_a_spec
-
  * include_module
 
 It also provides rake commands
 
  * rake spec_cat:accept
-
  * spec_cat:coverage
-
 
  NOTE: This gem does not depend on Rails.  All paths are relative to cwd, which
  may be Rails.root or anywhere else.
@@ -39,7 +35,7 @@ are different.
 
 It also writes a .tmp file to replace the old ground truth if it's gone stale.
 
-e.g.  #foo produces a gnarly string too nasty to copy and paste into code.
+e.g.  #foo produces a gnarly string too nasty to copy and paste into spec code.
 
      foo.should eql_file( 'spec/data/foo.json' )
 

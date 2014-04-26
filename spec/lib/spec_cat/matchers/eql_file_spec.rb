@@ -2,6 +2,8 @@ require 'spec_helper.rb'
 
 describe RSpec::Matchers, 'eql_file' do
 
+  let( :diff ) { 'diff goes here' }
+
   before( :each ) do
     @matcher = eql_file
     @path = 'spec/data/truth.txt'
@@ -16,18 +18,20 @@ describe RSpec::Matchers, 'eql_file' do
   end
 
   it 'has a failure message for should' do
-    expected = "expected that #{@truth} would match the contents of #{@path}"
+    expected = "expected that \"#{@truth}\" would match the contents of #{@path}\n\n#{diff}\n\n"
 
     @matcher.instance_variable_set( :@expected, @path )
     @matcher.instance_variable_set( :@actual, @truth )
+    @matcher.stub( :` ).and_return( diff )
     @matcher.failure_message_for_should.should eql( expected )
   end
 
   it 'has a failure message for should not' do
-    expected = "expected that #{@truth} would not match the contents of #{@path}"
+    expected = "expected that \"#{@truth}\" would not match the contents of #{@path}\n\n#{diff}\n\n"
 
     @matcher.instance_variable_set( :@expected, @path )
     @matcher.instance_variable_set( :@actual, @truth )
+    @matcher.stub( :` ).and_return( diff )
     @matcher.failure_message_for_should_not.should eql( expected )
   end
 

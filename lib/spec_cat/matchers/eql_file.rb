@@ -12,11 +12,13 @@ RSpec::Matchers.define :eql_file do |expected_path|
   end
 
   failure_message_for_should do |actual|
-    "expected that #{actual} would match the contents of #{expected}"
+    diff = `diff #{expected_path}.tmp #{expected_path}`
+    "expected that \"#{actual}\" would match the contents of #{expected}\n\n#{diff}\n\n"
   end
 
   failure_message_for_should_not do |actual|
-    "expected that #{actual} would not match the contents of #{expected}"
+    diff = `diff #{expected_path}.tmp #{expected_path}`
+    "expected that \"#{actual}\" would not match the contents of #{expected}\n\n#{diff}\n\n"
   end
 
   match do |actual|
