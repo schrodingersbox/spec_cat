@@ -24,7 +24,20 @@ It also provides rake commands
 
 Add this to your gemfile...
 
-      gem 'spec_cat'
+    gem 'spec_cat'
+    gem 'simplecov', :require => false
+     
+Add this to your spec_helper.rb...
+
+    # Initialize SimpleCov
+    
+    require 'simplecov'
+    
+    SimpleCov.start 'rails' do
+      add_filter '/vendor/'
+      add_filter '/spec/'
+    end
+
 
 ## Matchers
 
