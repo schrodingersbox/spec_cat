@@ -4,7 +4,7 @@ describe 'coverage' do
 
   Dir.glob( File.join( 'lib', '**', '*.{rb,rake}' ) ) do |path|
     it "has a spec for #{path}" do
-      path.should have_a_spec
+      expect( path ).to have_a_spec
     end
   end
 

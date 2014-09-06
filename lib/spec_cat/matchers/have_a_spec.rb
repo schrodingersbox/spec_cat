@@ -12,11 +12,11 @@ RSpec::Matchers.define :have_a_spec do
     File.exists?( spec_file_for( path ) )
   end
 
-  failure_message_for_should do |path|
+  failure_message do |path|
     "expected #{path} to have spec at #{spec_file_for( path )}"
   end
 
-  failure_message_for_should_not do |path|
+  failure_message_when_negated do |path|
     "expected #{path} to not have spec at #{spec_file_for( path )}"
   end
 

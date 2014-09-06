@@ -14,9 +14,9 @@ describe 'spec_cat rake tasks' do
 
     it 'runs specs and accepts all ground truth file changes' do
       expected = 'rspec spec'
-      Kernel.should_receive( :system ).with( expected )
+      expect( Kernel ).to receive( :system ).with( expected )
       @rake[ 'spec_cat:accept' ].invoke
-      ENV[ 'SPEC_CAT_ACCEPT' ].should  eql( '1' )
+      expect( ENV[ 'SPEC_CAT_ACCEPT' ] ).to eql( '1' )
     end
 
   end
@@ -25,7 +25,7 @@ describe 'spec_cat rake tasks' do
 
     it 'runs specs and opens the coverage report' do
       expected = 'rspec spec && open coverage/index.html'
-      Kernel.should_receive( :system ).with( expected )
+      expect( Kernel ).to receive( :system ).with( expected )
       @rake[ 'spec_cat:coverage' ].invoke
     end
 

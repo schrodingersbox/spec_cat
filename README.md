@@ -92,6 +92,11 @@ specs pass.
  * [Publishing your gem](http://guides.rubygems.org/publishing/)
  * [Better Specs](http://betterspecs.org)
 
+## Version History
+
+ * 3.0.0 - RSpec 3 supported
+ * 1.0.3 - Last version with RSpec 2.x support
+
 ## TODO
 
  * Fix include_module - only get class if arg is not already a class

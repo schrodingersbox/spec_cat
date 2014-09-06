@@ -8,11 +8,11 @@ RSpec::Matchers.define :include_module do |expected_module|
     "includes #{expected}"
   end
 
-  failure_message_for_should do |subject|
+  failure_message do |subject|
     "expected that #{subject.class} would include #{expected}"
   end
 
-  failure_message_for_should_not do |subject|
+  failure_message_when_negated do |subject|
     "expected that #{subject.class} would not include #{expected}"
   end
 

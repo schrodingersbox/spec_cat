@@ -1,3 +1,3 @@
 module SpecCat
-  VERSION = '1.0.4'
+  VERSION = '3.0.0'
 end

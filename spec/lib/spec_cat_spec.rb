@@ -11,12 +11,12 @@ describe SpecCat do
 
     it 'returns true if SPEC_CAT_ACCEPT is set in the environment' do
       ENV[ 'SPEC_CAT_ACCEPT' ] = '1'
-      SpecCat.accept?.should be_true
+      expect( SpecCat.accept? ).to be( true )
     end
 
     it 'returns false if SPEC_CAT_ACCEPT is not set in the environment' do
       ENV[ 'SPEC_CAT_ACCEPT' ] = nil
-      SpecCat.accept?.should be_false
+      expect( SpecCat.accept? ).to be( false )
     end
 
   end
@@ -27,9 +27,9 @@ describe SpecCat do
       tmp = @path + '.tmp'
       File.delete( tmp ) if File.exists?( tmp )
 
-      File.exists?( tmp ).should be_false
+      expect( File.exists?( tmp ) ).to be( false )
       SpecCat.write( tmp, @truth )
-      File.exists?( tmp ).should be_true
+      expect( File.exists?( tmp ) ).to be( true )
     end
 
   end
@@ -37,7 +37,7 @@ describe SpecCat do
   describe '::read' do
 
     it 'reads a file' do
-      SpecCat.read( @path ).should eql( @truth )
+      expect( SpecCat.read( @path ) ).to eql( @truth )
     end
 
   end

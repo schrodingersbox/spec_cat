@@ -9,29 +9,29 @@ describe RSpec::Matchers, 'have_a_spec' do
   end
 
   it 'has a description' do
-    @matcher.description.should eql( 'has a spec file' )
+    expect( @matcher.description ).to eql( 'has a spec file' )
   end
 
   it 'has a failure message for should' do
     expected = "expected #{@bad_path} to have spec at #{have_a_spec.spec_file_for( @bad_path )}"
 
     @matcher.instance_variable_set( :@actual, @bad_path )
-    @matcher.failure_message_for_should.should eql( expected )
+    expect( @matcher.failure_message ).to eql( expected )
   end
 
   it 'has a failure message for should not' do
      expected = "expected #{@good_path} to not have spec at #{have_a_spec.spec_file_for( @good_path )}"
 
     @matcher.instance_variable_set( :@actual, @good_path )
-    @matcher.failure_message_for_should_not.should eql( expected )
+     expect( @matcher.failure_message_when_negated ).to eql( expected )
   end
 
   it 'has a spec for itself' do
-    @good_path.should have_a_spec
+    expect( @good_path ).to have_a_spec
   end
 
   it 'does not have a spec for foo/bar.rb' do
-    @bad_path.should_not have_a_spec
+    expect( @bad_path ).to_not have_a_spec
   end
 
 end
