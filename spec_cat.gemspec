@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.name        = 'spec_cat'
   s.version     = SpecCat::VERSION
   s.licenses    = ['MIT']
-  s.date        = '2012-09-16'
+  s.date        = '2017-05-17'
   s.summary     = 'RSpec support library'
   s.description = 'Adds a few useful RSpec matchers'
   s.authors     = ['Rich Humphrey']
