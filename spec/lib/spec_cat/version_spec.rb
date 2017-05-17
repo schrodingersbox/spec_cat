@@ -1,4 +1,4 @@
-require "spec_cat/version"
+require 'spec_cat/version'
 
 describe 'version' do
 

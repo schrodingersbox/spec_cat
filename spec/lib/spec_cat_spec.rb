@@ -22,11 +22,11 @@ describe SpecCat do
 
     it 'writes a file' do
       tmp = @path + '.tmp'
-      File.delete( tmp ) if File.exists?( tmp )
+      File.delete( tmp ) if File.exist?( tmp )
 
-      expect( File.exists?( tmp ) ).to be( false )
+      expect( File.exist?( tmp ) ).to be( false )
       SpecCat.write( tmp, @truth )
-      expect( File.exists?( tmp ) ).to be( true )
+      expect( File.exist?( tmp ) ).to be( true )
     end
   end
 

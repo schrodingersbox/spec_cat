@@ -13,10 +13,10 @@ module SpecCat
   end
 
   def self.write( path, content )
-    File.open( path,'wb' ) { |io| io.write content }
+    File.open( path, 'wb' ) { |io| io.write content }
   end
 
   def self.read( path )
-    File.open( path, 'rb' ) { |io| io.read }
+    File.open( path, 'rb', &:read )
   end
 end

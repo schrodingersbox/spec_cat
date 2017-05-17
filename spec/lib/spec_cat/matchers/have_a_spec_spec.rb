@@ -18,10 +18,10 @@ describe RSpec::Matchers, 'have_a_spec' do
   end
 
   it 'has a failure message for should not' do
-     expected = "expected #{@good_path} to not have spec at #{have_a_spec.spec_file_for( @good_path )}"
+    expected = "expected #{@good_path} to not have spec at #{have_a_spec.spec_file_for( @good_path )}"
 
     @matcher.instance_variable_set( :@actual, @good_path )
-     expect( @matcher.failure_message_when_negated ).to eql( expected )
+    expect( @matcher.failure_message_when_negated ).to eql( expected )
   end
 
   it 'has a spec for itself' do

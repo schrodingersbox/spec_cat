@@ -9,7 +9,7 @@ RSpec::Matchers.define :have_a_spec do
   end
 
   match do |path|
-    File.exists?( spec_file_for( path ) )
+    File.exist?( spec_file_for( path ) )
   end
 
   failure_message do |path|

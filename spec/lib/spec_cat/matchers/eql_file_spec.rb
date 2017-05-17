@@ -56,11 +56,11 @@ describe RSpec::Matchers, 'eql_file' do
 
       it 'writes a tmp file' do
         tmp = @path + '.tmp'
-        File.delete( tmp ) if File.exists?( tmp )
+        File.delete( tmp ) if File.exist?( tmp )
 
-        expect( File.exists?( tmp ) ).to be( false )
+        expect( File.exist?( tmp ) ).to be( false )
         expect( @truth ).to eql_file( @path )
-        expect( File.exists?( tmp ) ).to be( true )
+        expect( File.exist?( tmp ) ).to be( true )
       end
     end
   end

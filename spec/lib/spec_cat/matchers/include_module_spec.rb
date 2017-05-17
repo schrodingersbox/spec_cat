@@ -10,55 +10,56 @@ end
 
 describe RSpec::Matchers, 'include_module' do
 
-  before( :each ) do
-    @matcher = include_module
-    @module = IncludeModulePass
-    @subject = IncludeModuleTestClass.new
+  let( :matcher ) { include_module }
+  let( :included ) { IncludeModulePass }
+  let( :not_included ) { IncludeModuleFail }
+  let( :klass ) { IncludeModuleTestClass }
+  let( :instance ) { klass.new }
+
+  describe 'generating strings' do
+
+    before( :each ) do
+      allow( matcher ).to receive( :expected ).and_return( included )
+      matcher.instance_variable_set( :@actual, instance )
+    end
+
+    it 'has a description' do
+      expect( matcher.description ).to eql( "includes #{included}" )
+    end
+
+    it 'has a failure message for should' do
+      expected = "expected that #{klass} would include #{included}"
+      expect( matcher.failure_message ).to eql( expected )
+    end
+
+    it 'has a failure message for should not' do
+      expected = "expected that #{klass} would not include #{included}"
+      expect( matcher.failure_message_when_negated ).to eql( expected )
+    end
   end
 
-  it 'has a description' do
-    allow( @matcher ).to receive( :expected ).and_return( @module )
-    expect( @matcher.description ).to eql( "includes #{@module}" )
-  end
-
-  it 'has a failure message for should' do
-    expected = "expected that #{@subject.class} would include #{@module}"
-
-    allow( @matcher ).to receive( :expected ).and_return( @module )
-    @matcher.instance_variable_set( :@actual, @subject )
-    expect( @matcher.failure_message ).to eql( expected )
-  end
-
-  it 'has a failure message for should not' do
-    expected =  "expected that #{@subject.class} would not include #{@module}"
-
-    allow( @matcher ).to receive( :expected ).and_return( @module )
-    @matcher.instance_variable_set( :@actual, @subject )
-    expect( @matcher.failure_message_when_negated ).to eql( expected )
-  end
-
-  describe 'match' do
+  describe 'matching' do
 
     context 'with an instance' do
 
       it 'passes if the module is included' do
-        expect( @subject ).to include_module( IncludeModulePass )
+        expect( instance ).to include_module( included )
       end
 
       it 'fails if the module is not included' do
-        expect( @subject ).to_not include_module( IncludeModuleFail )
+        expect( instance ).to_not include_module( not_included )
       end
     end
 
     context 'with a class' do
 
       it 'passes if the module is included' do
-        expect( IncludeModuleTestClass ).to include_module( IncludeModulePass )
+        expect( klass ).to include_module( included )
       end
 
       it 'fails if the module is not included' do
-        expect( IncludeModuleTestClass ).to_not include_module( IncludeModuleFail )
+        expect( klass ).to_not include_module( not_included )
       end
-   end
+    end
   end
 end

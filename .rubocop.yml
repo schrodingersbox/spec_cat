@@ -1,2 +1,33 @@
-inherit_from: .rubocop_todo.yml
+AllCops:
+  Exclude:
+    - 'bin/*'
 
+Metrics/LineLength:
+  Max: 120
+
+Style/Documentation:
+  Enabled: false
+
+# Barfing on spec blocks
+
+Metrics/BlockLength:
+  Enabled: false
+
+# Prefer explicit returns
+
+Style/RedundantReturn:
+  Enabled: false
+
+# Prefer lighter and fluffier code
+
+Style/EmptyLinesAroundBlockBody:
+  Enabled: false
+
+Style/EmptyLinesAroundModuleBody:
+  Enabled: false
+
+Style/SpaceInsideBrackets:
+  Enabled: false
+
+Style/SpaceInsideParens:
+  Enabled: false
