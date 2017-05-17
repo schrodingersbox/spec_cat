@@ -50,7 +50,7 @@ It also writes a .tmp file to replace the old ground truth if it's gone stale.
 
 e.g.  #foo produces a gnarly string too nasty to copy and paste into spec code.
 
-     foo.should eql_file( 'spec/data/foo.json' )
+     expect( foo ).to eql_file( 'spec/data/foo.json' )
 
 ... if it fails for a valid change, you can just....
 
@@ -67,7 +67,7 @@ If you use this, you should add `*.tmp` to your .gitignore.
 `have_a_spec` will ensure that any given path has a corresponding spec file to
 help ensure that you have good coverage.
 
-    'app/controllers/application_controller.rb'.should have_a_spec
+    expect( 'app/controllers/application_controller.rb' ).to have_a_spec
 
 ... is a good thing to write right after you integrate RSpec.
 
@@ -79,7 +79,7 @@ Here's an example coverage spec...
 
 `include_module` makes it easy to spec concern inclusion.
 
-    it( 'is Taggable' ) { should include_module( Taggable ) }
+    it( 'is Taggable' ) { is_expected.to include_module( Taggable ) }
 
 ## Rake Tasks
 
@@ -110,8 +110,5 @@ specs pass.
  * 3.0.0 - RSpec 3 supported
  * 1.0.3 - Last version with RSpec 2.x support
 
-## TODO
-
- * Fix include_module - only get class if arg is not already a class
 
 

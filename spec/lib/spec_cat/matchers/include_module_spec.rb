@@ -39,12 +39,26 @@ describe RSpec::Matchers, 'include_module' do
 
   describe 'match' do
 
-    it 'passes if the module is includes' do
-      expect( @subject ).to include_module( IncludeModulePass )
+    context 'with an instance' do
+
+      it 'passes if the module is included' do
+        expect( @subject ).to include_module( IncludeModulePass )
+      end
+
+      it 'fails if the module is not included' do
+        expect( @subject ).to_not include_module( IncludeModuleFail )
+      end
     end
 
-    it 'fails if the module is not included' do
-      expect( @subject ).to_not include_module( IncludeModuleFail )
-    end
+    context 'with a class' do
+
+      it 'passes if the module is included' do
+        expect( IncludeModuleTestClass ).to include_module( IncludeModulePass )
+      end
+
+      it 'fails if the module is not included' do
+        expect( IncludeModuleTestClass ).to_not include_module( IncludeModuleFail )
+      end
+   end
   end
 end
