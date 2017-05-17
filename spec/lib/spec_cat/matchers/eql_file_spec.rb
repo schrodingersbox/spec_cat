@@ -50,7 +50,6 @@ describe RSpec::Matchers, 'eql_file' do
         expect( SpecCat ).to receive( :write ).with( @path, @truth )
         expect( @truth ).to eql_file( @path )
       end
-
     end
 
     context 'not accepting' do
@@ -63,9 +62,6 @@ describe RSpec::Matchers, 'eql_file' do
         expect( @truth ).to eql_file( @path )
         expect( File.exists?( tmp ) ).to be( true )
       end
-
     end
-
   end
-
 end

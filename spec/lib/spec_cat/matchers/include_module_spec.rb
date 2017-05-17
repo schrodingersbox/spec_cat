@@ -46,7 +46,5 @@ describe RSpec::Matchers, 'include_module' do
     it 'fails if the module is not included' do
       expect( @subject ).to_not include_module( IncludeModuleFail )
     end
-
   end
-
 end

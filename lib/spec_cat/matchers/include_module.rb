@@ -19,5 +19,4 @@ RSpec::Matchers.define :include_module do |expected_module|
   match do |subject|
     subject.class.included_modules.include?( expected_module )
   end
-
 end

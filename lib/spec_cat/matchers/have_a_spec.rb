@@ -29,5 +29,4 @@ RSpec::Matchers.define :have_a_spec do
 
     return File.join( dirname, basename )
   end
-
 end

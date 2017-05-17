@@ -31,5 +31,4 @@ describe RSpec::Matchers, 'have_a_spec' do
   it 'does not have a spec for foo/bar.rb' do
     expect( @bad_path ).to_not have_a_spec
   end
-
 end

@@ -14,5 +14,4 @@ describe 'railtie' do
     expect( SpecCat::Railtie ).to receive( :load ).with( 'tasks/spec_cat.rake' )
     rake_tasks.first.call
   end
-
 end

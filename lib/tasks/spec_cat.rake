@@ -10,5 +10,4 @@ namespace :'spec_cat' do
   task :coverage do
     Kernel.system 'rspec spec && open coverage/index.html'
   end
-
 end

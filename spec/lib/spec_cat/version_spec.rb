@@ -7,5 +7,4 @@ describe 'version' do
     expect( SpecCat::VERSION ).to be_an_instance_of( String )
     expect( SpecCat::VERSION ).to match( /\d+\.\d+\.\d+/ )
   end
-
 end

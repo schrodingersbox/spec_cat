@@ -5,5 +5,4 @@ describe 'coverage' do
       expect( path ).to have_a_spec
     end
   end
-
 end

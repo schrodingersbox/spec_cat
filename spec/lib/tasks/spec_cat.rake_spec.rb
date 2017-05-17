@@ -17,7 +17,6 @@ describe 'spec_cat rake tasks' do
       @rake[ 'spec_cat:accept' ].invoke
       expect( ENV[ 'SPEC_CAT_ACCEPT' ] ).to eql( '1' )
     end
-
   end
 
   describe 'rake spec_cat:coverage' do
@@ -27,8 +26,5 @@ describe 'spec_cat rake tasks' do
       expect( Kernel ).to receive( :system ).with( expected )
       @rake[ 'spec_cat:coverage' ].invoke
     end
-
   end
-
-
 end

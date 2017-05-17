@@ -26,5 +26,4 @@ RSpec::Matchers.define :eql_file do |expected_path|
     SpecCat.write( expected_path + extension, actual )
     actual == SpecCat.read( expected_path )
   end
-
 end

@@ -19,5 +19,4 @@ module SpecCat
   def self.read( path )
     File.open( path, 'rb' ) { |io| io.read }
   end
-
 end
