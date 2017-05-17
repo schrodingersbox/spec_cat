@@ -1,5 +1,3 @@
-require 'spec_helper.rb'
-
 describe 'coverage' do
 
   Dir.glob( File.join( 'lib', '**', '*.{rb,rake}' ) ) do |path|

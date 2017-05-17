@@ -1,5 +1,3 @@
-require 'spec_helper.rb'
-
 describe RSpec::Matchers, 'eql_file' do
 
   let( :diff ) { 'diff goes here' }

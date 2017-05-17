@@ -1,5 +1,3 @@
-require 'spec_helper.rb'
-
 module IncludeModulePass
 end
 

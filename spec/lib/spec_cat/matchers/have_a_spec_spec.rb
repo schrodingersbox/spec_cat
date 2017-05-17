@@ -1,5 +1,3 @@
-require 'spec_helper.rb'
-
 describe RSpec::Matchers, 'have_a_spec' do
 
   before( :each ) do

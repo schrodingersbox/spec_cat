@@ -1,5 +1,3 @@
-require 'spec_helper.rb'
-
 describe SpecCat do
 
   before( :each ) do

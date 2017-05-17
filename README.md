@@ -113,6 +113,5 @@ specs pass.
 ## TODO
 
  * Fix include_module - only get class if arg is not already a class
- * Add more matchers
 
 

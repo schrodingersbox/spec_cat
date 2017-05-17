@@ -1,5 +1,3 @@
-require 'spec_helper.rb'
-
 require 'spec_cat/railtie'
 
 describe 'railtie' do
