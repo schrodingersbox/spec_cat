@@ -11,6 +11,7 @@ This gem contains trivial matchers to make RSpecs a bit more effective and less 
  * eql_file
  * have_a_spec
  * include_module
+ * pass_rubocop
 
 It also provides rake commands
 
@@ -81,6 +82,13 @@ Here's an example coverage spec...
 
     it( 'is Taggable' ) { is_expected.to include_module( Taggable ) }
 
+### pass_rubocop
+
+`pass_rubcop` just executes [Rubocop](http://batsov.com/rubocop/) and passes or fails 
+based on it's exit status.
+
+    it( 'passes' ) { is_expected.to pass_rubocop }
+
 ## Rake Tasks
 
 ### spec_cat:accept
@@ -108,6 +116,7 @@ specs pass.
 
 ## Version History
 
+ * 3.1.0 - Rubocop integration
  * 3.0.0 - RSpec 3 supported
  * 1.0.3 - Last version with RSpec 2.x support
 
