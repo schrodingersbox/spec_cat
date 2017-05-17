@@ -99,6 +99,7 @@ specs pass.
 ## Reference
 
  * [RSpec](https://github.com/rspec/rspec)
+ * [Rubocop](http://batsov.com/rubocop/)
  * [Testing Rake Tasks with RSpec](http://www.philsergi.com/2009/02/testing-rake-tasks-with-rspec.html)
  * [Nathan Humbert's Blog: Rails 3: Loading rake tasks from a gem](http://blog.nathanhumbert.com/2010/02/rails-3-loading-rake-tasks-from-gem.html)
  * [Add Achievement Badges to Your Gem README](http://elgalu.github.io/2013/add-achievement-badges-to-your-gem-readme/)
