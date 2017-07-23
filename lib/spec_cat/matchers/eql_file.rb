@@ -13,7 +13,8 @@ RSpec::Matchers.define :eql_file do |expected_path|
 
   failure_message do |actual|
     diff = `diff #{expected_path}.tmp #{expected_path}`
-    "expected that \"#{actual}\" would match the contents of #{expected}\n\n#{diff}\n\n"
+    fix = "cp #{expected_path}.tmp #{expected_path}"
+    "expected that \"#{actual}\" would match the contents of #{expected}\n\n#{diff}\n\n#{fix}\n\n"
   end
 
   failure_message_when_negated do |actual|

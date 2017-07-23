@@ -22,7 +22,7 @@ describe RSpec::Matchers, 'eql_file' do
     end
 
     it 'has a failure message for should' do
-      expected = "expected that \"#{truth}\" would match the contents of #{path}\n\n#{diff}\n\n"
+      expected = "expected that \"#{truth}\" would match the contents of #{path}\n\n#{diff}\n\ncp .tmp \n\n"
       expect( matcher.failure_message ).to eql( expected )
     end
 
