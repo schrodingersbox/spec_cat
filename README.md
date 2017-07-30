@@ -116,6 +116,7 @@ specs pass.
 
 ## Version History
 
+ * 3.1.2 - Adding `validate_with` matcher from https://gist.github.com/Bartuz/98abc9301adbc883b510
  * 3.1.0 - Rubocop integration
  * 3.0.0 - RSpec 3 supported
  * 1.0.3 - Last version with RSpec 2.x support
