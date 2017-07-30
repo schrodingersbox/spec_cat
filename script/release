@@ -1,0 +1,27 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'bundler/setup'
+require 'spec_cat'
+
+include SystemCat
+
+GEM_NAME = 'spec_cat'.freeze
+
+status = Git.status
+raise 'Not on master' unless status[:branch] == :master
+raise 'Uncommited changes' unless status[:clean]
+
+Git.pull
+Shell.run('rspec spec')
+
+version = Version.new('config/version.txt')
+
+Shell.run("gem build #{GEM_NAME}.gemspec")
+Shell.run("gem push #{GEM_NAME}-#{version}.gem")
+
+Git.tag(version.to_s)
+version.bump
+Git.commit("Bumping version to #{version}")
+
+Git.push(:origin, :master)

@@ -1,12 +1,12 @@
 $LOAD_PATH << File.join(File.dirname(__FILE__), 'lib')
 
 # Maintain your gem's version:
-require 'spec_cat/version'
+require 'system_cat/version'
 require 'date'
 
 Gem::Specification.new do |s|
   s.name        = 'spec_cat'
-  s.version     = SpecCat::VERSION
+  s.version     = SystemCat::Version.new.to_s
   s.date        = Date.today.to_s
   s.licenses    = ['MIT']
   s.summary     = 'RSpec support library'
