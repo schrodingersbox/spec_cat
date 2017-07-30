@@ -1,6 +1,6 @@
 AllCops:
   Exclude:
-    - 'Rakefile*'
+    - 'Rakefile'
     - 'bin/*'
 
 Metrics/LineLength:

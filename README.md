@@ -51,7 +51,7 @@ It also writes a .tmp file to replace the old ground truth if it's gone stale.
 
 e.g.  #foo produces a gnarly string too nasty to copy and paste into spec code.
 
-     expect( foo ).to eql_file( 'spec/data/foo.json' )
+     expect(foo).to eql_file('spec/truth/foo.json')
 
 ... if it fails for a valid change, you can just....
 
@@ -68,7 +68,7 @@ If you use this, you should add `*.tmp` to your .gitignore.
 `have_a_spec` will ensure that any given path has a corresponding spec file to
 help ensure that you have good coverage.
 
-    expect( 'app/controllers/application_controller.rb' ).to have_a_spec
+    expect('app/controllers/application_controller.rb').to have_a_spec
 
 ... is a good thing to write right after you integrate RSpec.
 
@@ -80,14 +80,14 @@ Here's an example coverage spec...
 
 `include_module` makes it easy to spec concern inclusion.
 
-    it( 'is Taggable' ) { is_expected.to include_module( Taggable ) }
+    it('is taggable') { is_expected.to include_module(Taggable) }
 
 ### pass_rubocop
 
 `pass_rubcop` just executes [Rubocop](http://batsov.com/rubocop/) and passes or fails 
 based on it's exit status.
 
-    it( 'passes' ) { is_expected.to pass_rubocop }
+    it('passes Rubocop') { is_expected.to pass_rubocop }
 
 ## Rake Tasks
 
@@ -119,6 +119,11 @@ specs pass.
  * 3.1.0 - Rubocop integration
  * 3.0.0 - RSpec 3 supported
  * 1.0.3 - Last version with RSpec 2.x support
+ 
+ # Credits
+ 
+ Thanks to [Filip Bartuzi](https://github.com/Bartuz) and [Otavio Medeiros](https://github.com/otaviomedeiros)
+ for publishing their gists of the `validate_with` matcher! 
 
 
 

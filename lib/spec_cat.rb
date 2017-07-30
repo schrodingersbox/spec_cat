@@ -1,9 +1,7 @@
 require 'rspec'
 
-require 'spec_cat/matchers/eql_file'
-require 'spec_cat/matchers/have_a_spec'
-require 'spec_cat/matchers/include_module'
-require 'spec_cat/matchers/pass_rubocop'
+require 'require_all'
+require_rel 'spec_cat/matchers'
 
 require 'spec_cat/railtie' if defined?(Rails)
 
