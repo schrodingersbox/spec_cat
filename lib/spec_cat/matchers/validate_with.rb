@@ -37,6 +37,6 @@ RSpec::Matchers.define :validate_with do |expected_validator|
   end
 
   failure_message_when_negated do
-    "do not expected to validate with #{expected_validator}#{@options.present? ? (' with options ' + @options) : ''}"
+    "expected to not validate with #{expected_validator}#{@options.present? ? (' with options ' + @options) : ''}"
   end
 end

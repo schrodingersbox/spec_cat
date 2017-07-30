@@ -12,6 +12,7 @@ This gem contains trivial matchers to make RSpecs a bit more effective and less 
  * have_a_spec
  * include_module
  * pass_rubocop
+ * validates_with
 
 It also provides rake commands
 
@@ -88,6 +89,12 @@ Here's an example coverage spec...
 based on it's exit status.
 
     it('passes Rubocop') { is_expected.to pass_rubocop }
+
+### validates_with
+
+`validates_with` confirms that an `ActiveModel::Validator` is being used.
+
+    it('validates numbers') { is_expected.to validate_with(NumberValidator) }
 
 ## Rake Tasks
 
