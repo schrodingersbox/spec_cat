@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'rspec', '~> 3.0', '>= 3.0.0'
   s.add_dependency 'rubocop', '~> 0'
-  s.add_dependency 'require_all'
+  s.add_dependency 'require_all', '~> 0'
 
   s.add_development_dependency 'rails', '~> 5.0', '>= 5.0.0'
   s.add_development_dependency 'simplecov', '~> 0'
