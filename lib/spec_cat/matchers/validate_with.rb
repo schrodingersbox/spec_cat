@@ -9,6 +9,7 @@
 #     end
 
 RSpec::Matchers.define :validate_with do |expected_validator|
+
   match do |subject|
     @validator = subject.class.validators.find do |validator|
       validator.class == expected_validator
@@ -24,19 +25,23 @@ RSpec::Matchers.define :validate_with do |expected_validator|
     end
   end
 
+  def options_message
+    @options.present? ? (' with options ' + @options.to_s) : ''
+  end
+
   chain :with_options do |options|
     @options = options
   end
 
   description do
-    'RSpec matcher for validates_with'
+    "validates with #{expected}"
   end
 
   failure_message do
-    "expected to validate with #{expected_validator}#{@options.present? ? (' with options ' + @options) : ''}"
+    "expected to validate with #{expected}#{options_message}"
   end
 
   failure_message_when_negated do
-    "expected to not validate with #{expected_validator}#{@options.present? ? (' with options ' + @options) : ''}"
+    "expected to not validate with #{expected}#{options_message}"
   end
 end

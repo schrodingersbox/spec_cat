@@ -1,14 +1,15 @@
-module IncludeModulePass
-end
-
-module IncludeModuleFail
-end
-
-class IncludeModuleTestClass
-  include IncludeModulePass
-end
-
 describe RSpec::Matchers, 'include_module' do
+
+  module IncludeModulePass
+  end
+
+  module IncludeModuleFail
+  end
+
+  class IncludeModuleTestClass
+    include IncludeModulePass
+  end
+
 
   let( :matcher ) { include_module }
   let( :included ) { IncludeModulePass }
