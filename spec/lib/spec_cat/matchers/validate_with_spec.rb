@@ -2,7 +2,7 @@ require 'active_model'
 
 describe RSpec::Matchers, 'validate_with' do
 
-  class TestValidator  < ActiveModel::Validator
+  class TestValidator < ActiveModel::Validator
   end
 
   class UnvalidatedModel
@@ -11,7 +11,7 @@ describe RSpec::Matchers, 'validate_with' do
 
   class ValidatedModel
     include ActiveModel::Model
-    validates_with TestValidator
+    validates_with TestValidator, test: true
   end
 
   let( :matcher ) { validate_with }
@@ -47,10 +47,19 @@ describe RSpec::Matchers, 'validate_with' do
 
     it 'passes if the model is validated' do
       expect( validated ).to validate_with( validator )
+      expect( validated ).to validate_with( validator ).with_options( test: true )
+    end
+
+    it 'passes if the model is validated with options' do
+      expect( validated ).to validate_with( validator ).with_options( test: true )
     end
 
     it 'fails if the model is not validated' do
       expect( unvalidated ).to_not validate_with( validator )
+    end
+
+    it 'passes if the model is not validated with options' do
+      expect( validated ).to validate_with( validator ).with_options( test: false )
     end
   end
 end

@@ -10,7 +10,6 @@ describe RSpec::Matchers, 'include_module' do
     include IncludeModulePass
   end
 
-
   let( :matcher ) { include_module }
   let( :included ) { IncludeModulePass }
   let( :not_included ) { IncludeModuleFail }
