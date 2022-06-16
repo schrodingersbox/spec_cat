@@ -1,3 +1,5 @@
+inherit_from: .rubocop_todo.yml
+
 AllCops:
   Exclude:
     - 'Rakefile'
@@ -27,7 +29,7 @@ Layout/EmptyLinesAroundBlockBody:
 Layout/EmptyLinesAroundModuleBody:
   Enabled: false
 
-Layout/SpaceInsideBrackets:
+Layout/SpaceInsideBlockBraces:
   Enabled: false
 
 Layout/SpaceInsideParens:
